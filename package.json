@@ -1,0 +1,15 @@
+{
+  "name": "gitbook-plugin-customFavicon",
+  "version": "1.0.0",
+  "description": "Adds class to html in nav bar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo no tests"
+  },
+  "engines": {
+    "gitbook": "*"
+  },
+  "author": "Dan Tolbert",
+  "license": "MIT",
+  "dependencies": {}
+}
