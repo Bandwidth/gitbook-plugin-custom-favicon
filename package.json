@@ -1,6 +1,6 @@
 {
-  "name": "gitbook-plugin-customFavicon",
-  "version": "1.0.0",
+  "name": "gitbook-plugin-custom-favicon",
+  "version": "0.0.3",
   "description": "Adds class to html in nav bar",
   "main": "index.js",
   "scripts": {
