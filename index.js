@@ -7,11 +7,12 @@ module.exports = {
 	hooks: {
 
 		"finish" : function () {
-			var pathFile = this.options.pluginsConfig && this.options.pluginsConfig.favicon;
+			var pathFile = this.options.pluginsConfig && this.options.pluginsConfig.custom-favicon;
 			var favicon = path.join(process.cwd(), pathFile);
-			if (pathFile && fs.existsSync(pathFile)){
-				fs.unlinkSync('_book/gitbook/images/favicon.ico');
-				fs.createReadStream('favicon/favicon.ico').pipe(fs.createWriteStream('_book/gitbook/images/favicon.ico'));
+			var gitbookFaviconPath = path.join(process.cwd(), '_book', 'gitbook', 'images', 'favicon.ico');
+			if (pathFile && fs.existsSync(pathFile) && fs.existsSync(gitbookFaviconPath)){
+				fs.unlinkSync(gitbookFaviconPath);
+				fs.createReadStream(favicon).pipe(fs.createWriteStream(gitbookFaviconPath));
 			}
 		}
 	},
