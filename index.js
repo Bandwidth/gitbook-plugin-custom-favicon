@@ -7,7 +7,7 @@ module.exports = {
 	hooks: {
 
 		"finish" : function () {
-			var pathFile = this.options.pluginsConfig && this.options.pluginsConfig.custom-favicon;
+			var pathFile = this.options.pluginsConfig && this.options.pluginsConfig['custom-favicon'];
 			var favicon = path.join(process.cwd(), pathFile);
 			var gitbookFaviconPath = path.join(process.cwd(), '_book', 'gitbook', 'images', 'favicon.ico');
 			if (pathFile && fs.existsSync(pathFile) && fs.existsSync(gitbookFaviconPath)){
